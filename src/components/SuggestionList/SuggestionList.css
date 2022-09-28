@@ -1,0 +1,16 @@
+.SuggestionList {
+	display: none;
+	padding: 4px;
+	list-style-type: none;
+	border: 1px solid #808080;
+	border-radius: 4px;
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.15);
+	margin-top: 0px;
+	border-top-width: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.SuggestionList--is-open {
+	display: block;
+}

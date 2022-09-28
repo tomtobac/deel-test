@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# deel.com - Frontend Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> URL preview: tbd
 
-## Available Scripts
+## Get Started
 
-In the project directory, you can run:
+### 📚 Install dependencies
 
-### `npm start`
+```bash
+$ npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🚀 Lunch the site!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+$ npm start
+```
 
-### `npm test`
+### ✏ Approach
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is what I have been able to achieve in 90min, I took very seriously the time spend on this challenge. I started with a more accessible approach with [datalist](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) which is the default auto-complete with input and it handles keystrokes automatically for the browser but then I realized that is not good for customization. Sigh! After spending 30min on that I wanted to implement it myself but I didn't want to deal with key events so I tried to use the web as much as possible. Lists and buttons which are focusable and ready for screen-readers.
 
-### `npm run build`
+At that moment I realized that maybe what they want is for every keystroke a new petition to the API (cache results) and show the suggestions. That won't be too much difficult to implement, something like:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```tsx
+<Searchbar
+	onChangeSearch={(search) => fetchNewData(search)}
+	options={options}
+/>
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Finally, I decided to implement an API with "Rick and Morty" API example and a hook to handle whenever user clicks outside.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📸 Screenshots
 
-### `npm run eject`
+!["Empty State"](./img/empty.png)
+!["Focused State"](./img/focused.png)
+!["Filtering"](./img/filtering.png)
+!["Accessiblity](./img/a11y.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 🧹 todos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. (reliability) Testing 🧪
+1. (a11y) Implement arrow selection on the dropdown, right now it only works with tabs, enter and space.
+1. (a11y) Close `SuggestionList` when `ESC` is pressed.
+1. (feature) Loading state when is loading the list
+1. (design) Use CSS variables to keep margin/padding consistens and colors (DRY)
+1. (design) Make the `SuggestionList` scrollable
+1. (reliability) typing!
+1. (feature) expose suggestion component to be personalized - maybe we want to show a picture close to the name.
+1. (feature) hide the `SuggestionList` when there is no suggestion.
