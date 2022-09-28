@@ -1,6 +1,6 @@
 # deel.com - Frontend Interview
 
-> URL preview: tbd
+> URL preview: https://tc-deel-frontend-challenge.netlify.app/
 
 ## Get Started
 
