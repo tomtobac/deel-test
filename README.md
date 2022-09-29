@@ -33,10 +33,11 @@ Finally, I decided to implement an API with "Rick and Morty" API example and a h
 
 ### 📸 Screenshots
 
-!["Empty State"](./img/empty.png)
-!["Focused State"](./img/focused.png)
-!["Filtering"](./img/filtering.png)
-!["Accessiblity](./img/a11y.png)
+|                       |                             |
+| --------------------- | --------------------------- |
+| !["Empty State"](./img/empty.png) | !["Filtering"](./img/filtered.png) |
+|!["Focused State"](./img/focused.png) | !["Accessiblity](./img/a11y.png) |
+
 
 ### 🧹 todos
 
